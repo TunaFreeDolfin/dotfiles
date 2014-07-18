@@ -2,3 +2,84 @@
 	name = Frank Perry
 	email = fperry@carbonite.com
 [credential]
+
+## color {{{
+#[color]
+#    branch = auto
+#    diff = auto
+#    status = auto
+
+#[color "branch"]
+#    current = red reverse
+#    local = blue
+#    remote = green
+
+#[color "diff"]
+#    meta = yellow bold
+#    frag = magenta bold
+#    old = red bold
+#    new = green bold
+
+#[color "status"]
+#    added = green
+#    changed = yellow
+#    untracked = red
+
+## }}}
+
+## difftool {{{
+#[difftool]
+#	prompt = false
+
+## alias {{{
+#[alias]
+#    unstage = reset HEAD --
+#    undo = reset --soft "HEAD^"
+#    st = status
+#    cl = clone
+#    ci = commit
+#    co = checkout
+#    br = branch 
+#    #log
+#    le = log --oneline --decorate
+#    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+#    ls1 = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+#    lds = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --graph
+#    ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+#    lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+#    #diff
+#    diff = diff --word-diff
+#    d = diff --word-diff
+#    #diff staged files
+#    dc = diff --cached
+#    #list modified files in last commit
+#    dl = "!git ll -1"
+#    #diff last commit
+#    dlc = diff --cached HEAD^
+
+#    #reset commands
+#    r = reset
+#    r1 = reset HEAD^
+#    r2 = reset HEAD^^
+#    rh = reset --hard
+#    rh1 = reset HEAD^ --hard
+#    rh2 = reset HEAD^^ --hard
+
+#    #grep on filename
+#    f = "!git ls-files | grep -i"
+
+#    #list remotes
+#    rem="git remote -v"
+## }}}
+#[mergetool "Kaleidoscope"]
+#	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+#	trustexitcode = true
+#[merge]
+#	tool = Kaleidoscope
+#[difftool "Kaleidoscope"]
+#	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+#[mergetool]
+#	prompt = false
+#[diff]
+#	tool = bc3
+
