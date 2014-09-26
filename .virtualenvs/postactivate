@@ -1,4 +1,4 @@
 #!/bin/bash
 # This hook is sourced after every virtualenv is activated.
 
-export PS1="(\#) (`basename $VIRTUAL_ENV`) \u@\h\w$ "
+export PS1="(\[\033[1;37m\]\#\[\033[0m\]) (`basename $VIRTUAL_ENV`) \u@\h\w$ "
