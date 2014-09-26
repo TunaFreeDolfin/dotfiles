@@ -2,3 +2,4 @@
 
 [ -s "/Users/fraper/.scm_breeze/scm_breeze.sh" ] && source "/Users/fraper/.scm_breeze/scm_breeze.sh"
 alias ls="ls -GFash"
+export PS1="(\#) \u@\h\w$ "
