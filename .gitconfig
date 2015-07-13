@@ -3,29 +3,29 @@
 	email = fperry@carbonite.com
 [credential]
 
-## color {{{
-#[color]
-#    branch = auto
-#    diff = auto
-#    status = auto
+# color {{{
+[color]
+    branch = auto
+    diff = auto
+    status = auto
 
-#[color "branch"]
-#    current = red reverse
-#    local = blue
-#    remote = green
+[color "branch"]
+    current = red reverse
+    local = blue
+    remote = green
 
-#[color "diff"]
-#    meta = yellow bold
-#    frag = magenta bold
-#    old = red bold
-#    new = green bold
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
 
-#[color "status"]
-#    added = green
-#    changed = yellow
-#    untracked = red
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = red
 
-## }}}
+# }}}
 
 ## difftool {{{
 #[difftool]
@@ -82,4 +82,7 @@
 #	prompt = false
 #[diff]
 #	tool = bc3
-
+[filter "media"]
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
